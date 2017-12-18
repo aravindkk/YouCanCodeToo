@@ -1,0 +1,177 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+body {
+  background: radial-gradient(#8c0404 0%, #000000 100%);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.notebook {
+  width: 70%;
+  height: 70%;
+}
+.notebook textarea {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1em;
+  font: 400 1em/2em 'Cuprum', sans-serif;
+  color: #3b0101;
+  text-shadow: 0 1px rgba(59, 1, 1, 0.2);
+  resize: none;
+  background: linear-gradient(to bottom, #d9d9d9 0%, #fffdef 5%, #fffdef 95%, #d9d9d9 100%);
+  background-size: 100% 2em;
+  background-repeat: repeat-y;
+  border-radius: 3px;
+  box-shadow: inset 0 0 30px rgba(59, 1, 1, 0.2), 0 2px 2px rgba(59, 1, 1, 0.6);
+  overflow: hidden;
+}
+.notebook textarea:focus {
+  outline: none;
+}
+.notebook footer {
+  background: rgba(255, 253, 239, 0.1);
+  padding: .1em 0;
+  font-family: 'entypo', sans-serif;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.notebook footer i {
+  margin-right: 15%;
+  background: transparent;
+  color: rgba(255, 253, 239, 0.8);
+  text-shadow: 0 1px 1px rgba(59, 1, 1, 0.3);
+  font-size: 2em;
+  border: none;
+  transition: color 250ms;
+  cursor: pointer;
+}
+.notebook footer button:last-of-type {
+  margin-right: 0;
+}
+.notebook footer button:hover {
+  color: rgba(255, 253, 239, 0.6);
+  text-shadow: none;
+}
+.notebook footer button:active {
+  color: #fffdef;
+}
+.notebook footer button:focus {
+  outline: none;
+  color: #fffdef;
+}
+@media screen and (max-width: 750px) {
+  .notebook footer button {
+    margin-right: 20%;
+  }
+}
+
+.output {
+  width: 70%;
+  height: 70%;
+  border-radius: 4px;
+  background: #fffad6;
+  padding: .5em 1em;
+  box-shadow: inset 0 0 2px 1px white, inset 0 0 20px 2px #fff089, 1px 3px 2px rgba(59, 1, 1, 0.7);
+}
+.output h1 {
+  font: normal 2em/1 'Della Respira', serif;
+  color: #540101;
+  text-shadow: 0 1px 0 white;
+  margin: 3px 0 3px 1.5em;
+}
+.output h2 {
+  font: normal .875em 'Cuprum', sans-serif;
+  color: rgba(59, 1, 1, 0.5);
+  text-shadow: 0 1px 0 white;
+  margin: 0 0 0 1em;
+}
+.output p {
+  font: normal .875em/1.5em 'Cuprum', sans-serif;
+  color: #4d4d4d;
+  text-shadow: 0 1px 0 white;
+  margin: 0 .875em 1.5em .875em;
+  border-top: 1px solid #3b0101;
+  padding-top: 2.3em;
+  // margin-top: -5px;
+}
+/*
+.output p:first-of-type {
+  border-top: 1px solid #3b0101;
+  padding-top: 2.3em;
+  margin-top: -5px;
+}
+*/
+
+.extraPages {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.page1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  border-radius: 3px;
+  background: #fffdef;
+  box-shadow: inset 0 0 30px rgba(59, 1, 1, 0.2), 0 2px 2px rgba(59, 1, 1, 0.6);
+  transform: rotate(-1deg);
+  z-index: -1;
+}
+
+.page2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  border-radius: 3px;
+  background: #fffdef;
+  box-shadow: inset 0 0 30px rgba(59, 1, 1, 0.2), 0 2px 2px rgba(59, 1, 1, 0.6);
+  transform: rotate(2deg);
+  z-index: -1;
+}
+
+footer.page {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  color: rgba(255, 253, 239, 0.3);
+  text-shadow: 0 1px black;
+  font: normal .875em 'Della Respira', cursive;
+  letter-spacing: .5em;
+  text-align: center;
+}
+
+
+.newPage
+{
+	color:white;
+}
+
+#addButton
+{
+  color: #540101;
+  text-shadow: 0 1px 0 white;
+}

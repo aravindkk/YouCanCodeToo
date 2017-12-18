@@ -1,0 +1,91 @@
+.lightbox {
+  background-color: fade(black, 80%);  
+  overflow: scroll;
+  position: fixed;
+  display: none;
+  z-index: 10000;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  
+  &-container {
+    position: relative;
+    max-width: 960px;
+    margin: 7% auto;
+    display: block;    
+    padding: 0 3%;
+    height: auto;
+    z-index: 100000;
+    
+    // Increasing top margin for mobile
+    @media screen and (max-width: 768px) { margin-top: 10%; }
+    @media screen and (max-width: 414px) { margin-top: 13%; }
+  }
+    
+  &-content {
+    box-shadow: 0 1px 6px fade(black, 70%);
+  }
+  
+  &-close {
+    text-transform: uppercase;    
+    background: transparent;
+    position: absolute; 
+    font-weight: 300;      
+    font-size: 12px;
+    display: block;
+    border: none;
+    color: white;
+    top: -22px;
+    right: 3%;
+  }
+}
+
+.video-container {  
+    padding-bottom: 56.25%;
+    position: relative;  
+    padding-top: 30px; 
+    overflow: hidden;
+    height: 0; 
+	z-index: 10000;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    height: 60%;  
+    width: 60%;  
+    left: 20%;  
+    top: 10%;
+}
+
+
+
+/* To show user faces on testimonial in nice circles */
+.user {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.one {
+  background-image: url('../P_4.jpeg');
+}
+
+.two {
+  background-image: url('../P_3.jpeg');
+}
+
+.three {
+  background-image: url('../P_2.jpeg');
+}
+
+.four {
+  background-image: url('../P_1.jpeg');
+}

@@ -1,0 +1,393 @@
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Reflection video #1: Making first Webpage</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/video.js/video-js.min.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.min.css">
+
+	
+	<!-- code written by me -->
+	<link href="css/custom.css" rel="stylesheet">
+	<style>
+	/*
+	body {
+    background-image: url("img/fancy-pants.jpg");
+    background-repeat: repeat;
+}
+*/
+
+body{
+overflow-x: hidden;
+ background-color: rgba(29, 43, 83, 0.99);
+}
+/*
+.gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: .9;
+  -webkit-backface-visibility: hidden;
+  background-color: #c24d67;
+  /* IE9, iOS 3.2+ */
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiM3YjNmNzUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2MyNGQ2NyIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #7b3f75), color-stop(1, #c24d67));
+  /* Android 2.3 */
+  background-image: -webkit-repeating-linear-gradient(top left, #7b3f75 0%, #c24d67 100%);
+  /* IE10+ */
+  background-image: repeating-linear-gradient(to bottom right, #7b3f75 0%, #c24d67 100%);
+  background-image: -ms-repeating-linear-gradient(top left, #7b3f75 0%, #c24d67 100%);
+}
+*/
+iframe{
+     overflow-y: hidden;
+}
+footer
+{
+padding-left: 30px;
+}
+#hovered
+{
+  color:white;
+  text-shadow: 1px 1px 1px #ccc;
+  font-size: 6.5em;
+  margin-left:40px;
+  margin-top:40px;
+  cursor: pointer;
+}
+#hovered:hover
+{
+  color:#9ac1fd;
+}
+#hovered2
+{
+  color:white;
+  text-shadow: 1px 1px 1px #ccc;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%); 
+  margin-left:20px;
+}
+#hovered2:hover
+{
+  color:#9ac1fd;
+}
+
+
+#points {
+    width: 500px;
+	height: 730px;
+    margin: 20px auto;
+    font: 16px/1.4 Arial, sans-serif;
+    background: #f3eee9;
+	margin-left:50px;
+}
+
+#points p {
+    margin: 0 0 1em;
+}
+
+.comment {
+    overflow: hidden;
+    padding: 0 0 1em;
+    border-bottom: 1px solid #ddd;
+    margin: 0 0 1em;
+    *zoom: 1;
+}
+
+.comment-img {
+    float: left;
+    margin-right: 33px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.comment-img img {
+    display: block;
+}
+
+.comment-body {
+    overflow: hidden;
+}
+
+.comment .text {
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 5px;
+    background: #fff;
+	font-size:1.2em;
+}
+
+.comment .text p:last-child {
+    margin: 0;
+}
+
+.comment .attribution {
+    margin: 0.5em 0 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Decoration */
+
+.comments,
+.comment {
+    position: relative;
+}
+
+.comments:before,
+.comment:before,
+.comment .text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 65px;
+}
+
+.comments:before {
+    width: 3px;
+    top: -20px;
+    bottom: -20px;
+    background: rgba(0,0,0,0.1);
+}
+
+.comment:before {
+    width: 18px;
+    height: 18px;
+    border: 6px solid #fff;
+    border-radius: 200px;
+    margin: 16px 0 0 -6px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0.1);
+    background: #ccc;
+}
+
+.comment:hover:before {
+    background: orange;
+}
+
+.comment .text:before {
+    top: 18px;
+    left: 78px;
+    width: 9px;
+    height: 9px;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+    background: #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}​
+
+	</style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<div class="gradient"></div>
+  </head>
+    <div class="row same-height-row">
+	  <div class="col-md-8" style="margin-top:20px;margin-left:20px;padding-right:5px; border-right: 5px solid black;">
+	  <!--width="1060" height="615" -->
+		  <!--iframe id="yt_player" src="https://www.youtube.com/embed/nKIu9yen5nc?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen onload="this.width=0.65*screen.width;this.height=0.7*screen.height;"></iframe-->
+		  <div id="player"></div>
+      </div>
+	  <div class="col-md-1">&nbsp;</div>
+      <div class="col-md-3" id="points">
+	  <!--width="660" height="615"-->
+<!--iframe src="notes.html" onload="this.width=0.30*screen.width;this.height=0.7*screen.height;"> </iframe-->
+<!--ul>
+<li>It's okay to not know everything to get started.</li>
+<li>CodePen, jsFiddle are great resources to get some quick code snippets.</li>
+<li>Only ask a question on StackOverflow if no similar question exists. And if an answer works for you, upvote it, so others can benefit from it.</li>
+</ul-->
+<!--h1>Reflection points</h1>
+<div id="list-example" class="list-group">
+  <a class="list-group-item list-group-item-action" href="#list-item-1">It's okay to not know everything to get started.<i class="fa fa-heart" aria-hidden="true"></i>
+</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-2">CodePen, jsFiddle are great resources to get some quick code snippets.<i class="fa fa-heart" aria-hidden="true"></i>
+</a>
+  <a class="list-group-item list-group-item-action" href="#list-item-3">Only ask a question on StackOverflow if no similar question exists. And if an answer works for you, upvote it, so others can benefit from it.<i class="fa fa-heart" aria-hidden="true"></i>
+</a>
+</div-->
+
+
+  <section class="comments">
+    <h1 style="margin-left:100px;padding-bottom:5px;padding-top:10px;">Reflection points</h1>
+	<hr/>
+    <article class="comment" id="first_point" style="padding-top:15px;padding-left:10px;border-top: 2px solid #ccc;">
+      <a class="comment-img" href="#non">
+        <!--img src="img/bullet.png" alt="" width="50" height="50"-->
+        <i class="fa fa-heart-o" aria-hidden="true" style="font-size:2.5em; color:#e31b23;" ></i>
+      </a>
+      <div class="comment-body">
+        <div class="text">
+          <p>It's okay to not know everything to get started.</p>
+        </div>
+        <!--p class="attribution">by <a href="#non">Joe Bloggs</a> at 14:23pm, 4th Dec 2010</p-->
+      </div>
+    </article>
+      <article class="comment" id="second_point" style="padding-top:15px;padding-left:10px;">
+      <a class="comment-img" href="#non">
+        <!--img src="img/bullet.png" alt="" width="50" height="50"-->
+		<i class="fa fa-heart-o" aria-hidden="true" style="font-size:2.5em; color:#e31b23;" ></i>
+      </a>
+      <div class="comment-body">
+        <div class="text">
+          <p>CodePen, jsFiddle are great resources to get some quick code snippets.</p>
+        </div>
+        <!--p class="attribution">by <a href="#non">Joe Bloggs</a> at 14:23pm, 4th Dec 2010</p-->
+      </div>
+    </article>
+	<article class="comment" id="third_point" style="padding-top:15px;padding-left:10px;">
+      <a class="comment-img" href="#non">
+        <!--img src="img/bullet.png" alt="" width="50" height="50"-->
+		<i class="fa fa-heart-o" aria-hidden="true" style="font-size:2.5em; color:#e31b23;" ></i>
+      </a>
+      <div class="comment-body">
+        <div class="text">
+          <p>Only ask a question on StackOverflow if no similar question exists. And if an answer works for you, upvote it, so others can benefit from it.</p>
+        </div>
+        <!--p class="attribution">by <a href="#non">Joe Bloggs</a> at 14:23pm, 4th Dec 2010</p-->
+      </div>
+    </article>
+  </section>​
+
+
+      </div>
+    </div>
+	<footer>
+	<div class="row">
+<div class="col-md-8">
+<h1 style="color:#fff">Reflection video #1: Making first Webpage</h1>
+<h2 style="color:rgba(255, 255, 255, 0.8);" class="lead">
+In this section, we will go over some learning points from watching Aravind's screencast.
+</h2>
+</div>
+<div class="col-md-1">
+</div>
+<div class="col-md-3">
+<!--img src="img/next.png" style="height:150px;width:150px;padding-top:20px;margin-left:40px;" /-->
+<i class="fa fa-play-circle" id="hovered" aria-hidden="true"></i>
+<span class="h1" id="hovered2">Next Lesson</span>
+</div>
+</div>
+</footer>
+<script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/video.js/video.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="vendor/svg-injector/svg-injector.min.js"></script>
+    <script src="vendor/wowjs/wow.min.js"></script>
+
+    <script src="js/index.min.js"></script>
+	
+	
+	<!-- code written by me-->
+	<script src="js/custom.js"></script>
+	
+	<script>
+	
+	$("i").click(function(){
+	$(this).toggleClass("fa-heart-o");
+	$(this).toggleClass("fa-heart");
+	});
+    </script>	
+
+    <script>
+	  $("#first_point").hide();
+	  $("#second_point").hide();
+	  $("#third_point").hide();
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '790',
+          width: '1240',
+          videoId: '2jn7MnPuotU',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+		first_step_done = false;
+		second_step_done = false;
+		third_step_done = false;
+		
+		setInterval(function()
+		{
+		  console.log(player.getCurrentTime());
+		  if(!first_step_done && player.getCurrentTime()>20)
+		  {
+		   player.pauseVideo();
+		   first_step_done = true;
+		   $("#first_point").show();
+		   setTimeout(function(){player.playVideo();},4000);
+		  }
+		  if(!second_step_done && player.getCurrentTime()>40)
+		  {
+		   player.pauseVideo();
+		   second_step_done = true;
+		   $("#second_point").show();
+		   setTimeout(function(){player.playVideo();},4000);
+		  }
+		  if(!third_step_done && player.getCurrentTime()>60)
+		  {
+		   player.pauseVideo();
+		   third_step_done = true;
+		   $("#third_point").show();
+		   setTimeout(function(){player.playVideo();},4000);
+		  }
+		},200);
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      
+	  var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          // setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+	  
+	  
+    </script>
+	</script>

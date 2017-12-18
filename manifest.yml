@@ -1,0 +1,5 @@
+---
+applications:
+ - name: YouCanCodeToo
+   random-route: true
+   memory: 256M

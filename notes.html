@@ -1,0 +1,32 @@
+<!-- *************INSTRUNCTIONS*******************
+
+  You have three(3) pages of notes you can take.
+
+- type into textarea block to take note
+- BOTTOM RIGHT BUTTON stores text in hidden div then sets second page
+- BOTTOM MIDDLE BUTTON will alert you on the page number you are on
+- BOTTOM LEFT BUTTON will display the text stored up to that page
+  - once output div is shown you can click the page to go back to note entry
+
+*************INSTRUNCTIONS******************* -->
+<link rel="stylesheet" href="fa/fa/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/notes.css">
+
+<div class="notebook">
+  <header></header>
+  <span class="extraPages">
+  <textarea id="page" cols="30" rows="10" placeholder="Type your notes here..."></textarea>
+  </span>
+  <footer>
+	<i class="fa fa-list seeOutput" aria-hidden="true"></i>
+    <i class="fa fa-floppy-o saveNotes" aria-hidden="true"></i>
+	<i class="fa fa-plus newPage" aria-hidden="true"></i>
+	<i class="fa fa-trash delPage" aria-hidden="true"></i>
+  </footer>
+</div>
+<div class="output">
+  <h1>Your Notes...<i class="fa fa-plus newPage" id="addButton" aria-hidden="true"></i></h1>
+  <!--h2><i class="fa fa-plus newPage" id="addButton" aria-hidden="true"></i></h2-->
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="js/notes.js"></script>
